@@ -1,0 +1,26 @@
+
+$burnt-sienna: (
+  50: #ebd1ce,
+  100: #e9bdb8,
+  200: #e7ada7,
+  300: #e5a29b,
+  400: #e7988f,
+  500: #e78d83,
+  600: #e68378,
+  700: #e47366,
+  700: #e47b6f,
+  800: #e76e60,
+  900: #EF6D58,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.75),
+    200: rgba(black, 0.70),
+    300: rgba(black, 0.63),
+    400: rgba(black, 0.55),
+    500: rgba(black, 0.48),
+    600: rgba(black, 0.38),
+    700: rgba(black, 0.27),
+    800: rgba(black, 0.16),
+    800: white,
+  )
+);

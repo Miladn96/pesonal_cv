@@ -1,0 +1,44 @@
+@import 'src/styles/index';
+
+.container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 80px);
+  section {
+    height: calc(100vh - 80px);
+    &.left {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .content {
+        display: flex;
+        flex-direction: column;
+        width: 513px;
+        span:first-child {
+          color: $textDarkAccent;
+          letter-spacing: 3px;
+        }
+        h1 {
+          margin: 24px 0;
+        }
+        .body-1{
+          color: $textLightGray;
+        }
+        .button-container {
+          margin-top: 33px;
+          button-component:first-child {
+            margin-right: 46px;
+          }
+        }
+      }
+    }
+    &.right {
+      width: 50%;
+      position: relative;
+      background-image: url('../../assets/photo/home-background.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

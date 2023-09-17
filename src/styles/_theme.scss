@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+@import './index';
+
+$burnt-sienna: (
+  100: #ee8a7b,
+  500: #EF6D58,
+  700: #ec543d,
+  900: #eb3114,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.75),
+    200: rgba(black, 0.70),
+    300: rgba(black, 0.63),
+    400: rgba(black, 0.55),
+    500: rgba(black, 0.48),
+    600: rgba(black, 0.38),
+    700: rgba(black, 0.27),
+    800: rgba(black, 0.16),
+    900: white,
+  )
+);
+
+$primary: mat.define-palette(
+  (100: white,
+  500: #FFFFFFA3,
+  700: #ffffff67,
+  900: #ffffff25,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.75),
+    200: rgba(black, 0.70),
+    300: rgba(black, 0.63),
+    400: rgba(black, 0.55),
+    500: rgba(black, 0.48),
+    600: rgba(black, 0.38),
+    700: rgba(black, 0.27),
+    800: rgba(black, 0.16),
+    900: white,
+  ))
+);
+
+$burntSienna: mat.define-palette($burnt-sienna);

@@ -1,1 +1,191 @@
-/* You can add global styles to this file, and also import other style files */
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+@import "src/styles/index";
+@import "src/styles/theme";
+@import "src/styles/typography";
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$personal_cv-primary: mat.define-palette($primary);
+$personal_cv-accent: mat.define-palette($burntSienna);
+$personal_cv-warn: mat.define-palette($burntSienna, 900);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$personal_cv-theme: mat.define-light-theme((
+  color: (
+    primary: $personal_cv-primary,
+    accent: $personal_cv-accent,
+    warn: $personal_cv-warn,
+  ),
+  typography: $custom-typography-config,
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($personal_cv-theme);
+
+body {
+  background-color: $background;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $textLight;
+  font-family: "Epilogue";
+}
+
+@font-face {
+  font-family: "Epilogue";
+  src: url("./assets/fonts/Epilogue/static/Epilogue-Medium.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 100;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-ExtraLight.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 200;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-Light.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 300;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 400;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 500;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-Medium.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 600;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-SemiBold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 700;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-Bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 800;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-ExtraBold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 900;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-Black.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 100;
+  font-style: italic;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-ThinItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 200;
+  font-style: italic;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-ExtraLightItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 300;
+  font-style: italic;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-LightItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 400;
+  font-style: italic;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-Italic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 500;
+  font-style: italic;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-MediumItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 600;
+  font-style: italic;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-SemiBoldItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 700;
+  font-style: italic;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-BoldItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 800;
+  font-style: italic;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-ExtraBoldItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Epilogue";
+  font-weight: 900;
+  font-style: italic;
+  src: url("./assets/fonts/Epilogue/static/Epilogue-BlackItalic.ttf")
+    format("truetype");
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

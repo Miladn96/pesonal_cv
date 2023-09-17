@@ -30,7 +30,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/styles/_theme.scss",
+                "inject": false,
+                "bundleName": "material-theme"
+              }
             ],
             "scripts": []
           },
@@ -100,5 +105,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "2726be8d-f65d-4eec-b292-2a1d3ac60e7f"
   }
 }

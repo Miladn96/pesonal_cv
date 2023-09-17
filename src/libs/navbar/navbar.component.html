@@ -1,0 +1,34 @@
+<div class="navbar-container">
+  <div class="logo">
+    <span class="h2"> MiladCV </span>
+  </div>
+  <ul>
+    <li
+      (click)="onNavigate('home')"
+      [class]="router.url.includes('home') ? 'active' : ''"
+    >
+      Home
+    </li>
+    <li
+      (click)="onNavigate('about')"
+      [class]="router.url.includes('about') ? 'active' : ''"
+    >
+      About
+    </li>
+    <li
+      (click)="onNavigate('portfolio')"
+      [class]="router.url.includes('portfolio') ? 'active' : ''"
+    >
+      Portfolio
+    </li>
+    <li
+      (click)="onNavigate('content')"
+      [class]="router.url.includes('content') ? 'active' : ''"
+    >
+      Content
+    </li>
+  </ul>
+  <button-component [buttonType]="ButtonTypeEnum.OUTLINE">
+    Contact
+  </button-component>
+</div>

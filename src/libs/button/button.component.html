@@ -1,0 +1,33 @@
+<ng-container *ngIf="buttonType === ButtonTypeEnum.OUTLINE">
+  <button
+    matRipple
+    [matRippleDisabled]="buttonType !== ButtonTypeEnum.OUTLINE"
+    matRippleColor="#ffffff25"
+    [class]="buttonType"
+    [style.width.px]="width"
+    [style.height.px]="height"
+  >
+    <ng-template [ngTemplateOutlet]="contentTemplate"></ng-template>
+  </button>
+</ng-container>
+
+<ng-container *ngIf="buttonType === ButtonTypeEnum.FILL">
+  <button
+    mat-flat-button
+    color="accent"
+    [style.width.px]="width"
+    [style.height.px]="height"
+  >
+    <ng-template [ngTemplateOutlet]="contentTemplate"></ng-template>
+  </button>
+</ng-container>
+
+<ng-container *ngIf="buttonType === ButtonTypeEnum.JUST_TEXT">
+  <button mat-button [style.width.px]="width" [style.height.px]="height">
+    <ng-template [ngTemplateOutlet]="contentTemplate"></ng-template>
+  </button>
+</ng-container>
+
+<ng-template #contentTemplate>
+  <ng-content></ng-content>
+</ng-template>

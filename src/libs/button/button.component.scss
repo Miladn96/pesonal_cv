@@ -1,0 +1,16 @@
+@import 'src/styles/index';
+
+button {
+  width: 131px;
+  height: 48px;
+  border-radius: 8px;
+  &.FILL {
+    background-color: $textDarkAccent;
+    font-size: 14px;
+    font-weight: 900;
+  }
+  &.OUTLINE {
+    border: 1px $textLightGray solid;
+    background-color: transparent;
+  }
+}

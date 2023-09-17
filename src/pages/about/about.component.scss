@@ -1,0 +1,34 @@
+@import 'src/styles/index';
+
+.container{
+  background-color: $light-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 120px;
+  * {
+    color: $textDark;
+  }
+  img {
+    width: 80%;
+    margin-top: 80px;
+  }
+  personal-info {
+    display: flex;
+    flex-direction: column;
+    width: 570px;
+    height: 435px;
+    margin: 78px 0 65px 0;
+    span[name] {
+      color: $textDarkAccent;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+    h1[position] {
+      margin-bottom: 60px;
+    }
+    span[details] {
+      line-height: 32px;
+    }
+  }
+}

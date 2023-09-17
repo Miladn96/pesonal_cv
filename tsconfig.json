@@ -22,7 +22,15 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@@personalCV/pages": ["./src/pages"],
+      "@@personalCV/libs": ["./src/libs"],
+      "@@personalCV/libs/*": ["./src/libs/*"],
+      "@@personalCV/app/*": ["./src/app/*"],
+      "@@personalCV/models": ["./src/models"],
+      "@@personalCV/models/*": ["./src/models/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
